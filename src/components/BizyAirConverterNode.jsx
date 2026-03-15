@@ -55,6 +55,8 @@ export const BizyAirConverterNode = ({ node, updateNode, isInputConnected, isOut
           parameters.push({ key, label: "画幅比例", type: "aspect_ratio", source: "aspect_ratio" });
         } else if (key.match(/resolution$/i)) {
           parameters.push({ key, label: "分辨率", type: "resolution", source: "resolution" });
+        } else if (key.match(/duration$/i)) {
+          parameters.push({ key, label: "视频时长", type: "duration", source: "duration", value: val });
         } else if (key.match(/image$/i)) {
           parameters.push({ key, label: `参考图${imageCounter}`, type: "image_url", source: `image_${imageCounter}` });
           imageCounter++;
