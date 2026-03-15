@@ -1,0 +1,27 @@
+{
+    "platform_alias": "T8star",
+    "api_key": "",
+    "chat_api_url": "https://ai.t8star.cn/v1/chat/completions",
+    "chat_model": [
+        "gemini-3.1-flash-lite-preview",
+        "gemini-3-flash-preview",
+        "grok-4-1-fast-reasoning",
+        "gpt-5.4",
+        "gpt-5.2"
+    ],
+    "image_api_url": "https://ai.t8star.cn/v1/image/generations",
+    "image_model": [
+        "gemini-3.1-flash-image-preview",
+        "gemini-3-pro-image-preview",
+        "gemini-2.5-flash-image",
+        "gpt-image-1.5",
+        "sora_image"
+    ],
+    "video_submit_url": "https://ai.t8star.cn/v1/video/generations",
+    "video_status_url": "https://ai.t8star.cn/v1/video/generations/{id}",
+    "video_model": [
+        "grok-video-3",
+        "veo3.1-fast",
+        "sora-2"
+    ]
+}

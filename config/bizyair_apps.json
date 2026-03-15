@@ -1,0 +1,440 @@
+{
+  "apps": [
+    {
+      "id": "nb2_txt2img",
+      "name": "NanoBanana 2 (文生图)",
+      "type": "image",
+      "web_app_id": 47318,
+      "parameters": [
+        {
+          "key": "17:BizyAir_NanoBanana2.prompt",
+          "label": "提示词",
+          "type": "string",
+          "source": "prompt"
+        },
+        {
+          "key": "17:BizyAir_NanoBanana2.resolution",
+          "label": "分辨率",
+          "type": "resolution",
+          "source": "resolution"
+        },
+        {
+          "key": "17:BizyAir_NanoBanana2.aspect_ratio",
+          "label": "画幅比例",
+          "type": "aspect_ratio",
+          "source": "aspect_ratio"
+        }
+      ]
+    },
+    {
+      "id": "nb2_img2img",
+      "name": "NanoBanana 2 (图生图)",
+      "type": "image",
+      "web_app_id": 47116,
+      "parameters": [
+        {
+          "key": "2:LoadImage.image",
+          "label": "参考图",
+          "type": "image_url",
+          "source": "image_1"
+        },
+        {
+          "key": "12:BizyAir_NanoBanana2.prompt",
+          "label": "提示词",
+          "type": "string",
+          "source": "prompt"
+        },
+        {
+          "key": "12:BizyAir_NanoBanana2.resolution",
+          "label": "分辨率",
+          "type": "resolution",
+          "source": "resolution"
+        },
+        {
+          "key": "12:BizyAir_NanoBanana2.aspect_ratio",
+          "label": "画幅比例",
+          "type": "aspect_ratio",
+          "source": "aspect_ratio"
+        }
+      ]
+    },
+    {
+      "id": "nbp_txt2img",
+      "name": "NanoBanana Pro (文生图)",
+      "type": "image",
+      "web_app_id": 47607,
+      "parameters": [
+        {
+          "key": "17:BizyAir_NanoBananaPro.prompt",
+          "label": "提示词",
+          "type": "string",
+          "source": "prompt"
+        },
+        {
+          "key": "17:BizyAir_NanoBananaPro.resolution",
+          "label": "分辨率",
+          "type": "resolution",
+          "source": "resolution"
+        },
+        {
+          "key": "17:BizyAir_NanoBananaPro.aspect_ratio",
+          "label": "画幅比例",
+          "type": "aspect_ratio",
+          "source": "aspect_ratio"
+        }
+      ]
+    },
+    {
+      "id": "nbp_img2img",
+      "name": "NanoBanana Pro (图生图)",
+      "type": "image",
+      "web_app_id": 40878,
+      "parameters": [
+        {
+          "key": "2:LoadImage.image",
+          "label": "参考图",
+          "type": "image_url",
+          "source": "image_1"
+        },
+        {
+          "key": "1:BizyAir_NanoBananaPro.prompt",
+          "label": "提示词",
+          "type": "string",
+          "source": "prompt"
+        },
+        {
+          "key": "1:BizyAir_NanoBananaPro.resolution",
+          "label": "分辨率",
+          "type": "resolution",
+          "source": "resolution"
+        },
+        {
+          "key": "1:BizyAir_NanoBananaPro.aspect_ratio",
+          "label": "画幅比例",
+          "type": "aspect_ratio",
+          "source": "aspect_ratio"
+        }
+      ]
+    },
+    {
+      "id": "nbp_multiview",
+      "name": "NanoBanana Pro (多视角)",
+      "type": "image",
+      "web_app_id": 43998,
+      "parameters": [
+        {
+          "key": "85:LoadImage.image",
+          "label": "参考图",
+          "type": "image_url",
+          "source": "image_1"
+        },
+        {
+          "key": "117:BizyAir_NanoBananaPro.resolution",
+          "label": "分辨率",
+          "type": "resolution",
+          "source": "resolution"
+        },
+        {
+          "key": "117:BizyAir_NanoBananaPro.aspect_ratio",
+          "label": "画幅比例",
+          "type": "aspect_ratio",
+          "source": "aspect_ratio"
+        },
+        {
+          "key": "117:BizyAir_NanoBananaPro.quality",
+          "label": "质量",
+          "type": "constant",
+          "value": "high"
+        },
+        {
+          "key": "117:BizyAir_NanoBananaPro.character_consistency",
+          "label": "角色一致",
+          "type": "constant",
+          "value": ""
+        }
+      ]
+    },
+    {
+      "id": "nb2_multi_inputs",
+      "name": "NanoBanana2 三图参考",
+      "type": "image",
+      "web_app_id": 47784,
+      "parameters": [
+        {
+          "key": "1:BizyAir_NanoBanana2.prompt",
+          "label": "提示词",
+          "type": "string",
+          "source": "prompt"
+        },
+        {
+          "key": "1:BizyAir_NanoBanana2.aspect_ratio",
+          "label": "画幅比例",
+          "type": "aspect_ratio",
+          "source": "aspect_ratio"
+        },
+        {
+          "key": "1:BizyAir_NanoBanana2.resolution",
+          "label": "分辨率",
+          "type": "resolution",
+          "source": "resolution"
+        },
+        {
+          "key": "7:easy imageIndexSwitch.index",
+          "label": "index",
+          "type": "constant",
+          "value": "6"
+        },
+        {
+          "key": "9:LoadImage.image",
+          "label": "参考图1",
+          "type": "image_url",
+          "source": "image_1"
+        },
+        {
+          "key": "8:LoadImage.image",
+          "label": "参考图2",
+          "type": "image_url",
+          "source": "image_2"
+        },
+        {
+          "key": "11:LoadImage.image",
+          "label": "参考图3",
+          "type": "image_url",
+          "source": "image_3"
+        }
+      ]
+    },
+    {
+      "id": "seedream5_multi_inputs",
+      "name": "Seedream5-三图参考",
+      "type": "image",
+      "web_app_id": 47120,
+      "parameters": [
+        {
+          "key": "40:LoadImage.image",
+          "label": "参考图1",
+          "type": "image_url",
+          "source": "image_1"
+        },
+        {
+          "key": "37:LoadImage.image",
+          "label": "参考图2",
+          "type": "image_url",
+          "source": "image_2"
+        },
+        {
+          "key": "39:LoadImage.image",
+          "label": "参考图3",
+          "type": "image_url",
+          "source": "image_3"
+        },
+        {
+          "key": "54:BizyAir_Seedream5.prompt",
+          "label": "提示词",
+          "type": "string",
+          "source": "prompt"
+        },
+        {
+          "key": "54:BizyAir_Seedream5.size",
+          "label": "size",
+          "type": "constant",
+          "value": "Custom"
+        },
+        {
+          "key": "54:BizyAir_Seedream5.custom_width",
+          "label": "custom_width",
+          "type": "constant",
+          "value": 2048
+        },
+        {
+          "key": "54:BizyAir_Seedream5.custom_height",
+          "label": "custom_height",
+          "type": "constant",
+          "value": 3096
+        },
+        {
+          "key": "54:BizyAir_Seedream5.inputcount",
+          "label": "inputcount",
+          "type": "constant",
+          "value": 3
+        }
+      ]
+    },
+    {
+      "id": "nb2_6img",
+      "name": "NanoBanana2 六图参考",
+      "type": "image",
+      "web_app_id": 47114,
+      "parameters": [
+        {
+          "key": "40:LoadImage.image",
+          "label": "参考图1",
+          "type": "image_url",
+          "source": "image_1"
+        },
+        {
+          "key": "37:LoadImage.image",
+          "label": "参考图2",
+          "type": "image_url",
+          "source": "image_2"
+        },
+        {
+          "key": "39:LoadImage.image",
+          "label": "参考图3",
+          "type": "image_url",
+          "source": "image_3"
+        },
+        {
+          "key": "46:LoadImage.image",
+          "label": "参考图4",
+          "type": "image_url",
+          "source": "image_4"
+        },
+        {
+          "key": "48:LoadImage.image",
+          "label": "参考图5",
+          "type": "image_url",
+          "source": "image_5"
+        },
+        {
+          "key": "52:LoadImage.image",
+          "label": "参考图6",
+          "type": "image_url",
+          "source": "image_6"
+        },
+        {
+          "key": "35:BizyAir_NanoBanana2.prompt",
+          "label": "提示词",
+          "type": "string",
+          "source": "prompt"
+        },
+        {
+          "key": "35:BizyAir_NanoBanana2.aspect_ratio",
+          "label": "画幅比例",
+          "type": "aspect_ratio",
+          "source": "aspect_ratio"
+        },
+        {
+          "key": "35:BizyAir_NanoBanana2.resolution",
+          "label": "分辨率",
+          "type": "resolution",
+          "source": "resolution"
+        },
+        {
+          "key": "35:BizyAir_NanoBanana2.inputcount",
+          "label": "inputcount",
+          "type": "constant",
+          "value": 6
+        },
+        {
+          "key": "35:BizyAir_NanoBanana2.mode",
+          "label": "mode",
+          "type": "constant",
+          "value": "third-party"
+        }
+      ]
+    },
+    {
+      "id": "Wan22_smoothMix_i2v",
+      "name": "Wan22_smoothMix图生视频",
+      "type": "image",
+      "web_app_id": 44124,
+      "parameters": [
+        {
+          "key": "52:LoadImage.image",
+          "label": "参考图1",
+          "type": "image_url",
+          "source": "image_1"
+        },
+        {
+          "key": "142:INTConstant.value",
+          "label": "value",
+          "type": "constant",
+          "value": 5
+        },
+        {
+          "key": "151:PrimitiveStringMultiline.value",
+          "label": "value",
+          "type": "constant",
+          "value": "a slow dolly-in begins at 50mm, f/2.2, framing the subject’s face in a medium close-up as her eyes—those piercing, electric-blue irises—gently shift focus from the viewer to a point just beyond the frame’s edge, suggesting an internal reckoning. The camera glides forward with a whisper of resistance, mirroring the subtle tension in her jawline, while a single, cool LED light source from the upper left casts sharp highlights along her silver bangs and the collar of her dark uniform, rendering the fabric’s crisp white stripes with high-contrast texture. Behind her, a deep crimson ribbon tied in a loose bow at her shoulder catches the ambient glow, its saturated hue bleeding into the cool shadows of the environment. The air is still, thick with the scent of ozone and old paper, and a faint, rhythmic ticking from unseen machinery pulses beneath the silence. *"
+        },
+        {
+          "key": "149:INTConstant.value",
+          "label": "value",
+          "type": "constant",
+          "value": 480
+        },
+        {
+          "key": "150:INTConstant.value",
+          "label": "value",
+          "type": "constant",
+          "value": 720
+        },
+        {
+          "key": "147:Float.Number",
+          "label": "Number",
+          "type": "constant",
+          "value": "16"
+        }
+      ]
+    },
+    {
+      "id": "Wan26_i2v",
+      "name": "Wan26_图生视频",
+      "type": "image",
+      "web_app_id": 41337,
+      "parameters": [
+        {
+          "key": "3:LoadImage.image",
+          "label": "参考图1",
+          "type": "image_url",
+          "source": "image_1"
+        },
+        {
+          "key": "2:BizyAir_Wan_V2_6_I2V_API.prompt",
+          "label": "提示词",
+          "type": "string",
+          "source": "prompt"
+        },
+        {
+          "key": "2:BizyAir_Wan_V2_6_I2V_API.duration",
+          "label": "duration",
+          "type": "constant",
+          "value": 5
+        }
+      ]
+    },
+    {
+      "id": "Veo3.1_i2v",
+      "name": "Veo3.1_图生视频",
+      "type": "image",
+      "web_app_id": 45993,
+      "parameters": [
+        {
+          "key": "1:LoadImage.image",
+          "label": "参考图1",
+          "type": "image_url",
+          "source": "image_1"
+        },
+        {
+          "key": "4:BizyAirSiliconCloudLLMAPI.user_prompt",
+          "label": "提示词",
+          "type": "string",
+          "source": "prompt"
+        },
+        {
+          "key": "7:BizyAir_Veo_V3_1_I2V_API.model",
+          "label": "model",
+          "type": "constant",
+          "value": "veo3.1-fast"
+        },
+        {
+          "key": "7:BizyAir_Veo_V3_1_I2V_API.aspect_ratio",
+          "label": "画幅比例",
+          "type": "aspect_ratio",
+          "source": "aspect_ratio"
+        }
+      ]
+    }
+  ]
+}

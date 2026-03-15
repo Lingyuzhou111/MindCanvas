@@ -1,0 +1,15 @@
+{
+    "platform_alias": "",
+    "api_key": "",
+    "chat_api_url": "",
+    "chat_model": [
+        "",
+        "",
+        ""
+    ],
+    "image_api_url": "",
+    "image_model": [],
+    "video_submit_url": "",
+    "video_status_url": "",
+    "video_model": []
+}

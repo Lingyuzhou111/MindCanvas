@@ -1,0 +1,134 @@
+@import "tailwindcss";
+
+@theme {
+  --color-zinc-950: #09090b;
+  --color-zinc-900: #18181b;
+  --color-zinc-800: #333338;
+  --color-zinc-700: #4d4d56;
+  --color-zinc-600: #63636e;
+  --color-zinc-500: #71717a;
+  --color-zinc-400: #a1a1aa;
+  --color-zinc-300: #d4d4d8;
+  --color-zinc-200: #e4e4e7;
+  --color-zinc-100: #f4f4f5;
+  --color-zinc-50: #fafafa;
+
+  --color-blue-400: #60a5fa;
+  --color-blue-500: #3b82f6;
+  --color-blue-600: #2563eb;
+
+  --color-red-400: #f87171;
+  --color-yellow-600: #ca8a04;
+
+  /* Custom base colors to handle pure black/white adapting to theme */
+  --color-base-black: #000000;
+  --color-base-white: #ffffff;
+}
+
+@layer base {
+  .light-theme {
+    --color-zinc-950: #f9fafb; /* Canvas Background */
+    --color-zinc-900: #ffffff; /* Node Background */
+    --color-zinc-800: #e5e7eb; /* Textarea/Input Background */
+    --color-zinc-700: #d1d5db; /* Border Color */
+    --color-zinc-600: #9ca3af;
+    --color-zinc-500: #9ca3af;
+    --color-zinc-400: #6b7280; /* Secondary Text */
+    --color-zinc-300: #111827; /* Primary Text / Headers */
+    --color-zinc-200: #030712;
+    --color-zinc-100: #1f2937; /* Control Dots / Ports (Dark in Light Mode) */
+    --color-zinc-50: #000000;
+
+    /* Invert pure black and white */
+    --color-base-black: #ffffff;
+    --color-base-white: #000000;
+  }
+}
+
+/* Because tailwind uses actual black and white, we can override them at theme level too, but overriding actual browser `black` in `@theme` can be risky in v4. However, we can map `bg-black` to our custom variable. Let's do that. */
+@theme {
+  --color-black: var(--color-base-black);
+  --color-white: var(--color-base-white);
+}
+
+@layer base {
+  body {
+    @apply bg-zinc-950 text-zinc-100 overflow-hidden;
+    margin: 0;
+    padding: 0;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  }
+}
+
+/* 隐藏全局滚动条 (只针对默认页面滚动) */
+body::-webkit-scrollbar {
+  width: 0px;
+  background: transparent;
+}
+
+/* 局部组件的自定义细滚动条 (例如输入框) */
+.custom-scrollbar::-webkit-scrollbar {
+  width: 6px;
+  background: transparent;
+}
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background-color: var(--color-zinc-700);
+  border-radius: 3px;
+}
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+  background-color: var(--color-zinc-600);
+}
+@property --node-angle {
+  syntax: '<angle>';
+  initial-value: 0deg;
+  inherits: false;
+}
+
+@layer utilities {
+  @keyframes node-border-flow {
+    from { --node-angle: 0deg; }
+    to { --node-angle: 360deg; }
+  }
+
+  .running-node-effect {
+    border-color: transparent !important;
+  }
+
+  .running-node-effect::before {
+    content: "";
+    position: absolute;
+    inset: -3px;
+    border-radius: inherit;
+    padding: 3px;
+    background: conic-gradient(
+      from var(--node-angle),
+      transparent 0deg,
+      transparent 140deg,
+      #6366f1 180deg,
+      #06b6d4 220deg,
+      transparent 260deg
+    );
+    -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+    animation: node-border-flow 3s linear infinite;
+    pointer-events: none;
+    z-index: 51;
+  }
+
+  /* 节点选中时的外环高亮，不引起内容跳变 */
+  .node-selected-ring {
+    box-shadow: 0 0 0 3px var(--color-zinc-300), 0 0 40px rgba(161, 161, 170, 0.4) !important;
+  }
+
+  /* 性能模式：关闭阴影 */
+  .performance-mode * {
+    box-shadow: none !important;
+  }
+
+  /* 性能模式下的选中环保持可见但无发光 */
+  .performance-mode .node-selected-ring {
+    box-shadow: 0 0 0 3px var(--color-zinc-300) !important;
+  }
+}

@@ -1,0 +1,24 @@
+{
+    "platform_alias": "5566xyz",
+    "api_key": "",
+    "chat_api_url": "http://api.0005566.xyz/v1/chat/completions",
+    "chat_model": [
+        "gemini-3-flash-preview",
+        "gpt-4.20-beta",
+        "grok-4.1",
+        "gpt-5.2",
+        "gpt-5.1"
+    ],
+    "image_api_url": "",
+    "image_model": [
+        "gemini-3.1-flash-image-preview",
+        "nano-banana-2",
+        "nano-banana-pro",
+        "grok-imagine-1.0"
+    ],
+    "video_submit_url": "",
+    "video_status_url": "",
+    "video_model": [
+        "grok-imagine-1.0-video"
+    ]
+}
